@@ -1,0 +1,5 @@
+import 'normalize.css'
+import '@spectrum-css/vars/dist/spectrum-global.css'
+import '@spectrum-css/vars/css/scales/spectrum-large.css'
+import '@spectrum-css/vars/dist/spectrum-dark.css'
+import '@spectrum-css/page/dist/index-vars.css'

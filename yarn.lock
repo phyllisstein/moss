@@ -1319,7 +1319,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@babel/runtime@npm:^7.10.2, @babel/runtime@npm:^7.11.2, @babel/runtime@npm:^7.13.17, @babel/runtime@npm:^7.8.4":
+"@babel/runtime@npm:^7.10.2, @babel/runtime@npm:^7.11.2, @babel/runtime@npm:^7.12.5, @babel/runtime@npm:^7.13.17, @babel/runtime@npm:^7.8.4":
   version: 7.14.0
   resolution: "@babel/runtime@npm:7.14.0"
   dependencies:
@@ -1678,6 +1678,58 @@ __metadata:
   version: 4.0.1
   resolution: "@sindresorhus/is@npm:4.0.1"
   checksum: 16908ae19a1ca54173594bfdc8f33c6b2203fc0592cd54d551999e5b7c937815b6127fbd131360fc2dd1b1e7fb6a6afcd3d0f977a630ee17d3c7afbe8e739c02
+  languageName: node
+  linkType: hard
+
+"@spectrum-css/button@npm:^3.0.3":
+  version: 3.0.3
+  resolution: "@spectrum-css/button@npm:3.0.3"
+  peerDependencies:
+    "@spectrum-css/vars": ^3.0.1
+  checksum: 0f883da54cdc58694c9b0af708ab161879ba2f84c753779635ebc0db7d25fc85b9d7bbf8fb2f3405f52b74e3b84fa18bdbdb16dc70ac9adf1e304ef8f141d5a0
+  languageName: node
+  linkType: hard
+
+"@spectrum-css/page@npm:^3.0.2":
+  version: 3.0.2
+  resolution: "@spectrum-css/page@npm:3.0.2"
+  dependencies:
+    "@spectrum-css/vars": ^3.0.2
+  checksum: dd3495553ec98e0b550ab5d2836f9da80fdd958da849fc438c42806f601018405d8ef62c7f125db29c32467541df5e7659a80ce2c5633a8a6e1e70bf264c6671
+  languageName: node
+  linkType: hard
+
+"@spectrum-css/site@npm:^2.0.2":
+  version: 2.0.2
+  resolution: "@spectrum-css/site@npm:2.0.2"
+  peerDependencies:
+    "@spectrum-css/vars": ^3.0.1
+  checksum: 134b2d041e9405cfd1db9a59e924c5f901776b772b0c1d948926874e822478ae3eb791c22551ed8695af5c11a52969e73538efd9d457f40dfb9545e7bd1bef14
+  languageName: node
+  linkType: hard
+
+"@spectrum-css/textfield@npm:^3.0.2":
+  version: 3.0.2
+  resolution: "@spectrum-css/textfield@npm:3.0.2"
+  peerDependencies:
+    "@spectrum-css/vars": ^3.0.1
+  checksum: 2f5bd9238a234a571f229704b7914ef120a798ab6984e648355584da9c3e1204c47b8bc318bbe98d493ed55fc1a59ee75f148cc4d46743506b69b8f3cbadd415
+  languageName: node
+  linkType: hard
+
+"@spectrum-css/typography@npm:^3.0.2":
+  version: 3.0.2
+  resolution: "@spectrum-css/typography@npm:3.0.2"
+  peerDependencies:
+    "@spectrum-css/vars": ^3.0.1
+  checksum: 8bb91d1dcb0606fa89fa4587ad42794df81f8c3ec1401500c1f7ada575377993bbd0908efb663d4d901909672a52b0a63e0cbd0faa0a277278878e4b368cc691
+  languageName: node
+  linkType: hard
+
+"@spectrum-css/vars@npm:^3.0.2":
+  version: 3.0.2
+  resolution: "@spectrum-css/vars@npm:3.0.2"
+  checksum: fc589b5e54a89c75d537514ce108677a50d0bc2803b21535ebbe604aee5b6ff83b8e122701a8b7a99a94f53761c21a1ed86fdd419c2b3f4453916e3e8b23b70c
   languageName: node
   linkType: hard
 
@@ -3976,7 +4028,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"csstype@npm:^3.0.2":
+"csstype@npm:^3.0.2, csstype@npm:^3.0.8":
   version: 3.0.8
   resolution: "csstype@npm:3.0.8"
   checksum: e15233592a2c580fd72c4346a5c921044b8f4f29bcb81628a81199c4d6a91eb8f8e4875f440ef9c990e85f179a3370f3b842fe55e4743119ad0ce712519e7123
@@ -5678,6 +5730,15 @@ fsevents@~2.3.1:
   languageName: node
   linkType: hard
 
+"invariant@npm:^2.2.4":
+  version: 2.2.4
+  resolution: "invariant@npm:2.2.4"
+  dependencies:
+    loose-envify: ^1.0.0
+  checksum: 96d8a2a4f0ad21020c5847546fc36bec5c0870d99f071aaa93df00c1036439d48211a1823ab6128f78a15ccc4c4f62baf6a65f6c0ed489270dd44d0a04f443a1
+  languageName: node
+  linkType: hard
+
 "ip@npm:^1.1.5":
   version: 1.1.5
   resolution: "ip@npm:1.1.5"
@@ -6350,7 +6411,7 @@ fsevents@~2.3.1:
   languageName: node
   linkType: hard
 
-"loose-envify@npm:^1.1.0, loose-envify@npm:^1.4.0":
+"loose-envify@npm:^1.0.0, loose-envify@npm:^1.1.0, loose-envify@npm:^1.4.0":
   version: 1.4.0
   resolution: "loose-envify@npm:1.4.0"
   dependencies:
@@ -6766,6 +6827,12 @@ fsevents@~2.3.1:
     "@babel/preset-env": ^7.13.15
     "@babel/preset-react": ^7.13.13
     "@babel/preset-typescript": ^7.13.0
+    "@spectrum-css/button": ^3.0.3
+    "@spectrum-css/page": ^3.0.2
+    "@spectrum-css/site": ^2.0.2
+    "@spectrum-css/textfield": ^3.0.2
+    "@spectrum-css/typography": ^3.0.2
+    "@spectrum-css/vars": ^3.0.2
     "@svgr/webpack": ^5.5.0
     "@types/chroma-js": ^2.1.3
     "@types/concurrently": ^6.0.1
@@ -6785,6 +6852,7 @@ fsevents@~2.3.1:
     chroma-js: ^2.1.1
     concurrently: ^6.0.2
     core-js: 3.x
+    csstype: ^3.0.8
     eslint: ^7.25.0
     eslint-plugin-jsx-a11y: ^6.4.1
     eslint-plugin-ramda: ^2.5.1
@@ -6804,6 +6872,7 @@ fsevents@~2.3.1:
     react: ^17.0.2
     react-dom: ^17.0.2
     react-helmet: ^6.1.0
+    react-helmet-async: ^1.0.9
     react-spring: ^9.1.2
     styled-components: ^5.2.3
     styled-media-query: ^2.1.2
@@ -8107,10 +8176,26 @@ fsevents@~2.3.1:
   languageName: node
   linkType: hard
 
-"react-fast-compare@npm:^3.1.1":
+"react-fast-compare@npm:^3.1.1, react-fast-compare@npm:^3.2.0":
   version: 3.2.0
   resolution: "react-fast-compare@npm:3.2.0"
   checksum: 6fe65c889eb4f326e97769135f97b3d63ac68737866f9c37f9625c9de4f5eaa9abed6f748eb3fd6a66808392118842916309cab7cfa99c67991f0c837433d6d2
+  languageName: node
+  linkType: hard
+
+"react-helmet-async@npm:^1.0.9":
+  version: 1.0.9
+  resolution: "react-helmet-async@npm:1.0.9"
+  dependencies:
+    "@babel/runtime": ^7.12.5
+    invariant: ^2.2.4
+    prop-types: ^15.7.2
+    react-fast-compare: ^3.2.0
+    shallowequal: ^1.1.0
+  peerDependencies:
+    react: ^16.6.0 || ^17.0.0
+    react-dom: ^16.6.0 || ^17.0.0
+  checksum: 69d082670e7b09f2df1784d1d58f8361d7bd3f57f37f2f4155aaf4f6cace1c213bb25a4cea9e1bd4bfaeb56b1dc83f614f5f6e4713f9d2465cf3d716c0ec897b
   languageName: node
   linkType: hard
 
