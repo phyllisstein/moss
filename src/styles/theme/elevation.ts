@@ -1,4 +1,8 @@
-import { css as animationCSS, AnimationCurve, AnimationDuration } from './animation'
+import {
+  css as animationCSS,
+  AnimationCurve,
+  AnimationDuration,
+} from './animation'
 import { css } from 'styled-components'
 import R from 'ramda'
 

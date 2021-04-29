@@ -2,7 +2,7 @@ import { AdobeClean, AdobeCleanSerif } from 'styles/fonts'
 import { Helmet, HelmetProvider } from 'react-helmet-async'
 import {
   StyleSheetManager,
-  ThemeProvider as StyledThemeProvider
+  ThemeProvider as StyledThemeProvider,
 } from 'styled-components'
 import type { AppProps } from 'next/app'
 import { Body } from 'styles/globals'
