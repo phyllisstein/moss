@@ -68,12 +68,13 @@ rules:
     - consistent
   react/jsx-curly-spacing:
     - warn
-    - spacing:
-        children:
-          when: always
-        objectLiterals:
-          when: never
+    - children:
+        when: always
+      attributes:
+        when: always
       when: always
+      spacing:
+        objectLiterals: never
   react/jsx-indent:
     - warn
     - 2

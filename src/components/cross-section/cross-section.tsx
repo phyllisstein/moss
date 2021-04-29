@@ -1,10 +1,12 @@
-import { FunctionComponent } from 'react'
+import type { HTMLAttributes, ReactElement, ReactNode } from 'react'
 import { Root } from './cross-section-styles'
 
-export const CrossSection: FunctionComponent = ({ children }) => {
+interface Props extends HTMLAttributes<HTMLElement> {
+  children: ReactNode | ReactNode[]
+}
+
+export function CrossSection({ children, ...props }: Props): ReactElement {
   return (
-    <Root>
-      { children }
-    </Root>
+    <Root { ...props }>{ children }</Root>
   )
 }

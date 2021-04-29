@@ -15,17 +15,13 @@ rules:
     - []
     - unspecified: bottom
       emptyLineMinimumPropertyThreshold: 4
-  plugin/no-unsupported-browser-features:
-    - true
-    - browsers:
-        - last 2 major versions and >5% in US and not dead and not IE > 0
+  plugin/no-unsupported-browser-features: null
   plugin/rational-order:
     - true
     - empty-line-between-groups: threshold
       empty-line-property-threshold: 3
       empty-lines-within-groups: false
       empty-line-before-unspecified: always
-      property-order: flexible
       unspecified: bottomAlphabetical
   block-no-empty: null
   color-hex-case: upper

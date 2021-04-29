@@ -1,11 +1,29 @@
-import { CrossSection, CrossSectionArticle } from 'components';
-import React from 'react';
+import {
+  CrossSection,
+  CrossSectionArticle,
+  CrossSectionColumn,
+} from 'components/cross-section'
+import { LoremIpsum } from 'components/lorem-ipsum'
+import type { ReactNode } from 'react'
 
-export default function CrossSectionPage() {
+export default function CrossSectionPage(): ReactNode {
   return (
     <CrossSection>
-      <CrossSectionArticle />
-      <CrossSectionArticle />
+      <CrossSectionColumn>
+        <CrossSectionArticle>
+          <LoremIpsum grafs={ 2 } ipsum='gibson' />
+        </CrossSectionArticle>
+      </CrossSectionColumn>
+      <CrossSectionColumn>
+        <CrossSectionArticle>
+          <LoremIpsum ipsum='bluth' />
+        </CrossSectionArticle>
+      </CrossSectionColumn>
+      <CrossSectionColumn>
+        <CrossSectionArticle>
+          <LoremIpsum grafs={ 1 } ipsum='constitution' />
+        </CrossSectionArticle>
+      </CrossSectionColumn>
     </CrossSection>
   )
 }

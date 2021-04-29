@@ -6,6 +6,7 @@ import * as plumber from './plumber'
 import * as responsive from './responsive'
 import * as scale from './scale'
 import * as typeface from './typeface'
+import * as typography from './typography'
 
 const theme = {
   animation,
@@ -16,6 +17,7 @@ const theme = {
   responsive,
   scale,
   typeface,
+  typography,
 }
 
 export type Theme = typeof theme
@@ -23,5 +25,5 @@ export type Theme = typeof theme
 export { theme }
 
 declare module 'styled-components' {
-  export interface DefaultTheme extends Theme {}
+  export type DefaultTheme = Theme
 }

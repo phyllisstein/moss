@@ -14,7 +14,7 @@ export const Body = createGlobalStyle`
   html {
     box-sizing: border-box;
 
-    font-size: 0;
+    font-size: 62.5%;
     line-height: 1.333;
 
     font-kerning: normal;
@@ -23,11 +23,11 @@ export const Body = createGlobalStyle`
   }
 
   body {
-    ${({ theme }) => theme.typeface.primaryFamily}
+    ${ ({ theme }) => theme.typeface.primaryFamily }
 
     margin: 0;
     padding: 0;
 
-    color: ${({ theme }) => theme.palette.css.text};
+    color: ${ ({ theme }) => theme.palette.css.text };
   }
 `
