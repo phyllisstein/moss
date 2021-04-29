@@ -1,6 +1,6 @@
 import _ from 'lodash'
-import { css } from 'styled-components'
 import { getValueAndUnit } from 'polished'
+import { css } from 'styled-components'
 import { unitless } from './scale'
 
 // (UnitsPerEm − hhea.Ascender − hhea.Descender) / (2 × UnitsPerEm)
@@ -66,13 +66,13 @@ const getPlumber = ({
     const marginBottom = round((leadingBottom + shift - 1) * gridHeightValue)
 
     return css`
-      margin-top: ${ marginTop }${ gridHeightUnit };
-      margin-bottom: ${ marginBottom }${ gridHeightUnit };
-      padding-top: ${ paddingTop }${ gridHeightUnit };
-      padding-bottom: ${ paddingBottom }${ gridHeightUnit };
+      margin-top: ${marginTop}${gridHeightUnit};
+      margin-bottom: ${marginBottom}${gridHeightUnit};
+      padding-top: ${paddingTop}${gridHeightUnit};
+      padding-bottom: ${paddingBottom}${gridHeightUnit};
 
-      font-size: ${ fontSize }${ gridHeightUnit };
-      line-height: ${ lineHeight }${ gridHeightUnit };
+      font-size: ${fontSize}${gridHeightUnit};
+      line-height: ${lineHeight}${gridHeightUnit};
     `
   }
 
@@ -93,10 +93,10 @@ const getPlumber = ({
     const [borderTop, borderBottom] = border
 
     return css`
-      margin-top: ${ marginTop }${ gridHeightUnit };
-      margin-bottom: ${ marginBottom }${ gridHeightUnit };
-      padding-top: calc(${ paddingTop }${ gridHeightUnit } - ${ borderTop });
-      padding-bottom: calc(${ paddingBottom }${ gridHeightUnit } - ${ borderBottom });
+      margin-top: ${marginTop}${gridHeightUnit};
+      margin-bottom: ${marginBottom}${gridHeightUnit};
+      padding-top: calc(${paddingTop}${gridHeightUnit} - ${borderTop});
+      padding-bottom: calc(${paddingBottom}${gridHeightUnit} - ${borderBottom});
     `
   }
 
