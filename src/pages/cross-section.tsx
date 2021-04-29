@@ -11,7 +11,7 @@ export default function CrossSectionPage(): ReactNode {
     <CrossSection>
       <CrossSectionColumn>
         <CrossSectionArticle>
-          <LoremIpsum grafs={ 2 } ipsum='gibson' />
+          <LoremIpsum grafs={ 1 } ipsum='gibson' />
         </CrossSectionArticle>
       </CrossSectionColumn>
       <CrossSectionColumn>

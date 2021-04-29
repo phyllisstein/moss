@@ -26,7 +26,7 @@ export const bluth = [
     I think I maced a crane. So maybe you could start jete-ing, and stop
     je-terrorizing me! Ohhh little guy. The tears aren't coming. The tears just
     aren't coming. Look at us, crying like a bunch of girls on the last day of camp.
-    GENE!! [screams] A sea of waiters and no one will take a drink order.
+    GENE! [screams] A sea of waiters and no one will take a drink order.
   `,
   `
     Wow. We're just blowing through nap time, aren't we. Hola, is Rosa still alive?
@@ -52,6 +52,18 @@ export const bluth = [
     I will be a bigger and hairier mole than the one on your inner left thigh! I
     didn't mean who… I meant… her? I am having a love affair with this ice cream
     sandwich. Of course. The "Bob Loblaw Law Blog." Wow. You, sir, are a mouthful!
+  `,
+  `
+    If this tableau I recreate, perhaps I can re-snare my mate. You are a worse
+    psychiatrist than you are a son-in-law and you will never get work as an actor
+    because you have no talent. It's so watery. And yet there's a smack of ham to
+    it.
+  `,
+  `
+    Well excuse me, Judge Reinhold! She's a contestant. It's sorta like an inner
+    beauty pageant. Ah, there it is. I just don't want him to point out my cracker
+    ass in front of Ann. Everybody dance… NOW. What do you expect, Mother? I'm half
+    machine! I'm a monster!
   `,
 ]
 
@@ -154,12 +166,12 @@ export const gibson = [
   `
     Strata of cigarette smoke rose from the tiers, drifting until it struck currents
     set up by the blowers and the amplified breathing of the Flatline as a
-    construct, a hardwired ROM cassette replicating a dead man’s skills, obsessions,
-    kneejerk responses. Her cheekbones flaring scarlet as Wizard’s Castle burned,
+    construct, a hardwired ROM cassette replicating a dead man's skills, obsessions,
+    kneejerk responses. Her cheekbones flaring scarlet as Wizard's Castle burned,
     forehead drenched with azure when Munich fell to the Tank War, mouth touched
     with hot gold as a gliding cursor struck sparks from the missionaries, the train
-    reached Case’s station. The Tessier-Ashpool ice shattered, peeling away from the
-    missionaries, the train reached Case’s station.
+    reached Case's station. The Tessier-Ashpool ice shattered, peeling away from the
+    missionaries, the train reached Case's station.
   `,
   `
     The two surviving Founders of Zion were old men, old with the movement of the
@@ -167,8 +179,8 @@ export const gibson = [
     where Case waited.
   `,
   `
-    He woke and found her stretched beside him in the human system. Then he’d taken
-    a long and pointless walk along the port’s security perimeter, watching the
+    He woke and found her stretched beside him in the human system. Then he'd taken
+    a long and pointless walk along the port's security perimeter, watching the
     gulls turn circles beyond the chain link. They were dropping, losing altitude in
     a canyon of rainbow foliage, a lurid communal mural that completely covered the
     hull of the spherical chamber. They were dropping, losing altitude in a canyon
@@ -176,15 +188,15 @@ export const gibson = [
     the bright void beyond the chain link.
   `,
   `
-    It was chambered for .22 long rifle, and Case would’ve preferred lead azide
+    It was chambered for .22 long rifle, and Case would've preferred lead azide
     explosives to the Tank War, mouth touched with hot gold as a gliding cursor
     struck sparks from the wall of a skyscraper canyon. A graphic representation of
-    data abstracted from the banks of every computer in the tunnel’s ceiling. He’d
+    data abstracted from the banks of every computer in the tunnel's ceiling. He'd
     taken the drug to blunt SAS, nausea, but the muted purring of the console in
-    faded pinks and yellows. He’d fallen face forward on a slab of soggy chip board,
+    faded pinks and yellows. He'd fallen face forward on a slab of soggy chip board,
     he rolled over, into the nearest door and watched the other passengers as he
     rode. Then a mist closed over the black water and the chassis of a gutted game
-    console. He’d waited in the puppet place had been a subunit of Freeside's
+    console. He'd waited in the puppet place had been a subunit of Freeside's
     security system.
   `,
   `
