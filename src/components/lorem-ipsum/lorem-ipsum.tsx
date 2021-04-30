@@ -1,6 +1,6 @@
 import * as ipsa from './ipsa'
 import _ from 'lodash'
-import { P } from '../fundaments'
+import { P } from '../elements'
 import R from 'ramda'
 import type { ReactElement } from 'react'
 import { useMemo } from 'react'

@@ -1,4 +1,7 @@
+/* eslint-disable sort-keys */
+
 import chroma from 'chroma-js'
+import R from 'ramda'
 
 export const js = {
   gray50: chroma('hsl(0, 0%, 100%)'),
@@ -61,3 +64,8 @@ export const js = {
   celery600: chroma('hsl(130, 47%, 41%)'),
   celery700: chroma('hsl(130, 48%, 37%)'),
 }
+
+export type JS = typeof js
+export type CSS = { [k in keyof JS]: string }
+
+export const css: CSS = R.map(R.invoker(0, 'css'), js)

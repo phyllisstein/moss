@@ -4,17 +4,17 @@ import { useSpring } from 'react-spring'
 
 interface Props extends HTMLAttributes<HTMLElement> {
   children?: ReactNode | ReactNode[]
-  scrollTo?: string
+  y?: string
 }
 
 export function CrossSectionArticle({
   children,
-  scrollTo = '50%',
+  y = '50%',
   ...rest
 }: Props): ReactElement {
   const animation = useSpring({
     to: {
-      y: scrollTo,
+      y,
     },
   })
 
