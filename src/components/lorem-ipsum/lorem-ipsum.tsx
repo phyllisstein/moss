@@ -15,11 +15,10 @@ interface Props {
 export function LoremIpsum({ grafs, ipsum }: Props): ReactElement {
   const grafElements = useMemo((): ReactElement[] => {
     const lora = ipsa[ipsum]
-    const shuffled = _.shuffle(lora)
     const grafCount = grafs || lora.length - 1
-    const selected = R.take(grafCount, shuffled)
+    const selected = R.take(grafCount, lora)
 
-    return R.map(l => <P key={ l.length }>{ l }</P>, R.take(grafCount, selected))
+    return R.map(l => <P key={ l.length }>{ l }</P>, selected)
   }, [grafs, ipsum])
 
   return grafElements
