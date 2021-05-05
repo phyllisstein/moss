@@ -1,4 +1,8 @@
 module.exports = {
+  distDir: 'build',
+  future: {
+    webpack5: true,
+  },
   typescript: {
     ignoreBuildErrors: true,
   },
@@ -7,7 +11,7 @@ module.exports = {
 
     config.module.rules.push({
       test: /\.svg$/,
-      use: [{ loader: '@svgr/webpack', options: { ref: true, svgo: true } }],
+      use: [{ loader: '@svgr/webpack', options: { ref: true, svgo: true }}],
     })
 
     return config
