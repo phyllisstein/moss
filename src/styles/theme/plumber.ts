@@ -42,7 +42,8 @@ const getPlumber = ({
   } = {}) {
     const [gridHeightValue, gridHeightUnit] = getValueAndUnit(gridHeight)
     fontSize = unitless(fontSize)
-    lineHeight = lineHeight == null ? fontSize : unitless(lineHeight)
+    lineHeight =
+      lineHeight == null ? fontSize * 1.2 : unitless(lineHeight * 1.2)
 
     const { baselineDifference, correctedBaseline } = getBaselineCorrection({
       baseline,

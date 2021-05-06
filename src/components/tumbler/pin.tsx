@@ -1,40 +1,38 @@
-import { config, useSpring } from 'react-spring'
 import type { HTMLAttributes, ReactElement, ReactNode } from 'react'
 import { Inner, Outer } from './pin-styles'
 import { useCallback, useRef, useState } from 'react'
 import { tumbler as tumblerState } from 'state'
 import { useRecoilState } from 'recoil'
+import { useSpring } from 'react-spring'
 import { useWheel } from 'react-use-gesture'
 
 interface Props extends HTMLAttributes<HTMLElement> {
   children?: ReactNode | ReactNode[]
-  primary?: boolean
 }
 
-export function Pin({ children, primary, ...rest }: Props): ReactElement {
+export function Pin({ children, ...rest }: Props): ReactElement {
   const outerRef = useRef<HTMLDivElement>(null)
-  const [pinHeight, setPinHeight] = useRecoilState(tumblerState.pinHeight)
+  const [pinHeight, setPinHeight] = useState(1)
+  const [targetDepth, setTargetDepth] = useState(0)
   const [pinScroll, setPinScroll] = useRecoilState(tumblerState.pinScroll)
 
   const innerHeightRef = useCallback((el: HTMLDivElement) => {
     if (!el) return
 
-    primary && setPinHeight(el.offsetHeight)
+    setPinHeight(el.offsetHeight)
+    setTargetDepth((el.children[1] as HTMLParagraphElement).offsetTop)
   }, [])
 
   const style = useSpring({
-    config: config.stiff,
-    y: pinScroll,
+    y: pinScroll * pinHeight - targetDepth,
   })
 
   useWheel(
     ({ xy: [, scrollY] }) => {
-      const scrollPercentage = `${ (scrollY / pinHeight) * 100 }%`
-      setPinScroll(scrollPercentage)
+      setPinScroll((scrollY / pinHeight) * -1)
     },
     {
       domTarget: outerRef,
-      enabled: primary,
     },
   )
 

@@ -7,6 +7,8 @@ module.exports = {
     ignoreBuildErrors: true,
   },
   webpack(config) {
+    config.devtool = 'cheap-module-source-map'
+
     config.resolve.modules = ['./src', './vendor', ...config.resolve.modules]
 
     config.module.rules.push({

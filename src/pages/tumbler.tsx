@@ -6,15 +6,15 @@ export default function TumblerPage(): ReactNode {
   return (
     <Tumbler>
       <Pin>
-        <LoremIpsum grafs={ 1 } ipsum='gibson' />
+        <LoremIpsum ipsum='genesis' />
       </Pin>
 
-      <Pin primary>
+      <Pin>
         <LoremIpsum ipsum='bluth' />
       </Pin>
 
       <Pin>
-        <LoremIpsum grafs={ 2 } ipsum='constitution' />
+        <LoremIpsum ipsum='gibson' />
       </Pin>
     </Tumbler>
   )
