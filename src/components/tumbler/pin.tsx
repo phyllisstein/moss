@@ -8,9 +8,14 @@ import { useWheel } from 'react-use-gesture'
 
 interface Props extends HTMLAttributes<HTMLElement> {
   children?: ReactNode | ReactNode[]
+  primary?: boolean
 }
 
-export function Pin({ children, ...rest }: Props): ReactElement {
+export function Pin({
+  children,
+  primary = false,
+  ...rest
+}: Props): ReactElement {
   const outerRef = useRef<HTMLDivElement>(null)
   const [pinHeight, setPinHeight] = useState(1)
   const [targetDepth, setTargetDepth] = useState(0)
@@ -20,19 +25,20 @@ export function Pin({ children, ...rest }: Props): ReactElement {
     if (!el) return
 
     setPinHeight(el.offsetHeight)
-    setTargetDepth((el.children[1] as HTMLParagraphElement).offsetTop)
+    setTargetDepth((el.children[3] as HTMLParagraphElement).offsetTop)
   }, [])
 
   const style = useSpring({
-    y: pinScroll * pinHeight - targetDepth,
+    y: `${ pinScroll * (targetDepth / pinHeight) * -100 }%`,
   })
 
   useWheel(
     ({ xy: [, scrollY] }) => {
-      setPinScroll((scrollY / pinHeight) * -1)
+      setPinScroll(scrollY / pinHeight)
     },
     {
       domTarget: outerRef,
+      enabled: primary,
     },
   )
 

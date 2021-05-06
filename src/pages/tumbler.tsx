@@ -9,7 +9,7 @@ export default function TumblerPage(): ReactNode {
         <LoremIpsum ipsum='genesis' />
       </Pin>
 
-      <Pin>
+      <Pin primary>
         <LoremIpsum ipsum='bluth' />
       </Pin>
 
