@@ -5,20 +5,20 @@ env:
   es2020: true
   node: true
   shared-node-browser: true
-parser: '@typescript-eslint/parser'
+parser: "@typescript-eslint/parser"
 parserOptions:
   ecmaFeatures:
     jsx: true
-  project: './tsconfig.json'
+  project: "./tsconfig.json"
 extends:
-  - 'eslint:recommended'
+  - "eslint:recommended"
   - plugin:@typescript-eslint/recommended
   - plugin:jsx-a11y/recommended
   - plugin:ramda/recommended
   - plugin:react-hooks/recommended
   - plugin:react/recommended
 plugins:
-  - '@typescript-eslint'
+  - "@typescript-eslint"
   - jsx-a11y
   - ramda
   - react
@@ -26,40 +26,40 @@ plugins:
   - sort-destructure-keys
 settings:
   react:
-    version: '17'
+    version: "17"
 rules:
-  '@typescript-eslint/ban-types': warn
-  '@typescript-eslint/consistent-type-imports':
+  "@typescript-eslint/ban-types": warn
+  "@typescript-eslint/consistent-type-imports":
     - warn
     - prefer: type-imports
-  '@typescript-eslint/member-delimiter-style':
+  "@typescript-eslint/member-delimiter-style":
     - warn
     - multiline:
         delimiter: none
       singleline:
         delimiter: comma
-  '@typescript-eslint/no-array-constructor': warn
-  '@typescript-eslint/no-empty-interface': warn
-  '@typescript-eslint/no-extra-non-null-assertion': warn
-  '@typescript-eslint/no-extra-semi': warn
-  '@typescript-eslint/no-inferrable-types': warn
-  '@typescript-eslint/no-unused-expressions':
+  "@typescript-eslint/no-array-constructor": warn
+  "@typescript-eslint/no-empty-interface": warn
+  "@typescript-eslint/no-extra-non-null-assertion": warn
+  "@typescript-eslint/no-extra-semi": warn
+  "@typescript-eslint/no-inferrable-types": warn
+  "@typescript-eslint/no-unused-expressions":
     - warn
     - allowShortCircuit: true
       allowTaggedTemplates: true
       allowTernary: true
-  '@typescript-eslint/no-unused-vars':
+  "@typescript-eslint/no-unused-vars":
     - error
     - argsIgnorePattern: ^_
       varsIgnorePattern: ^_
-  '@typescript-eslint/prefer-as-const': warn
-  '@typescript-eslint/prefer-namespace-keyword': warn
-  '@typescript-eslint/semi':
+  "@typescript-eslint/prefer-as-const": warn
+  "@typescript-eslint/prefer-namespace-keyword": warn
+  "@typescript-eslint/semi":
     - warn
     - never
-  '@typescript-eslint/sort-type-union-intersection-members': warn
+  "@typescript-eslint/sort-type-union-intersection-members": warn
 
-  react/display-name: 'off'
+  react/display-name: "off"
   react/jsx-closing-bracket-location:
     - warn
     - after-props
@@ -68,12 +68,13 @@ rules:
     - consistent
   react/jsx-curly-spacing:
     - warn
-    - spacing:
-        children:
-          when: always
-        objectLiterals:
-          when: never
+    - children:
+        when: always
+      attributes:
+        when: always
       when: always
+      spacing:
+        objectLiterals: never
   react/jsx-indent:
     - warn
     - 2
@@ -97,8 +98,8 @@ rules:
   react/jsx-tag-spacing:
     - warn
     - beforeSelfClosing: always
-  react/prop-types: 'off'
-  react/react-in-jsx-scope: 'off'
+  react/prop-types: "off"
+  react/react-in-jsx-scope: "off"
   react/self-closing-comp: warn
   react/sort-comp:
     - error
@@ -122,25 +123,25 @@ rules:
   sort-destructure-keys/sort-destructure-keys:
     - warn
     - caseSensitive: false
-  accessor-pairs: 'off'
+  accessor-pairs: "off"
   comma-dangle:
     - warn
     - always-multiline
-  eol-last: 'off'
+  eol-last: "off"
   indent:
     - warn
     - 2
-  no-extra-boolean-cast: 'off'
-  no-extra-semi: 'off'
+  no-extra-boolean-cast: "off"
+  no-extra-semi: "off"
   no-multiple-empty-lines:
     - warn
     - max: 2
       maxBOF: 0
-  no-regex-spaces: 'off'
-  no-trailing-spaces: 'off'
-  no-unused-expressions: 'off'
-  no-unused-labels: 'off'
-  no-unused-vars: 'off'
+  no-regex-spaces: "off"
+  no-trailing-spaces: "off"
+  no-unused-expressions: "off"
+  no-unused-labels: "off"
+  no-unused-vars: "off"
   no-var: warn
   object-curly-spacing:
     - warn
@@ -149,7 +150,7 @@ rules:
   prefer-const: warn
   prefer-rest-params: error
   radix: error
-  semi: 'off'
+  semi: "off"
   sort-imports:
     - warn
     - ignoreCase: true
@@ -158,16 +159,16 @@ rules:
     - asc
     - caseSensitive: false
       natural: true
-  sort-vars: 'off'
+  sort-vars: "off"
   template-curly-spacing:
     - warn
     - always
 overrides:
-  - files: '**/config/**'
+  - files: "**/config/**"
     rules:
-      indent: 'off'
-      sort-keys: 'off'
-      sort-vars: 'off'
-  - files: '**/*.js'
+      indent: "off"
+      sort-keys: "off"
+      sort-vars: "off"
+  - files: "**/*.js"
     rules:
-      '@typescript-eslint/no-var-requires': 'off'
+      "@typescript-eslint/no-var-requires": "off"

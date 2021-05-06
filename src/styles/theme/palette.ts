@@ -1,10 +1,8 @@
-import chroma from 'chroma-js'
+import { js as dark } from './spectrum-dark'
 import R from 'ramda'
-import { js as spectrumJs } from './spectrum-light'
 
 export const js = {
-  ...spectrumJs,
-  text: chroma('#000').alpha(0.87),
+  text: dark.gray800,
 }
 
 export type JS = typeof js
