@@ -1,20 +1,20 @@
 import { Pin, Tumbler } from 'components/tumbler'
-import { LoremIpsum } from 'components/lorem-ipsum'
+import { Lorem } from 'components/lorem'
 import type { ReactNode } from 'react'
 
 export default function TumblerPage(): ReactNode {
   return (
     <Tumbler>
       <Pin>
-        <LoremIpsum ipsum='genesis' />
+        <Lorem ipsum='genesis' />
       </Pin>
 
       <Pin primary>
-        <LoremIpsum ipsum='bluth' />
+        <Lorem ipsum='bluth' />
       </Pin>
 
       <Pin>
-        <LoremIpsum ipsum='gibson' />
+        <Lorem ipsum='gibson' />
       </Pin>
     </Tumbler>
   )

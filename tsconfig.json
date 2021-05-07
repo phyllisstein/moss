@@ -3,7 +3,7 @@
     "allowJs": true,
     "allowSyntheticDefaultImports": true,
     "alwaysStrict": true,
-    "baseUrl": "./",
+    "baseUrl": "./src",
     "checkJs": true,
     "esModuleInterop": true,
     "experimentalDecorators": true,
@@ -14,16 +14,12 @@
     "module": "esnext",
     "moduleResolution": "node",
     "noEmit": true,
-    "paths": {
-      "*": ["*", "./src/*", "./vendor/*"]
-    },
     "resolveJsonModule": true,
     "skipLibCheck": true,
     "strict": true,
     "target": "esnext"
   },
   "exclude": ["node_modules"],
-  "include": ["src/**/*", "vendor/**/*"],
   "typeAcquisition": {
     "enable": true
   }
