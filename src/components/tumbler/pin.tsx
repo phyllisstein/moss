@@ -6,7 +6,7 @@ import { useRecoilState } from 'recoil'
 import { useSpring } from 'react-spring'
 import { useWheel } from 'react-use-gesture'
 
-interface Props extends HTMLAttributes<HTMLElement> {
+interface Props extends HTMLAttributes<HTMLDivElement> {
   children?: ReactNode | ReactNode[]
   primary?: boolean
 }
@@ -43,8 +43,8 @@ export function Pin({
   )
 
   return (
-    <Outer ref={ outerRef }>
-      <Inner { ...rest } ref={ innerHeightRef } style={ style }>
+    <Outer { ...rest } ref={ outerRef }>
+      <Inner ref={ innerHeightRef } style={ style }>
         { children }
       </Inner>
     </Outer>

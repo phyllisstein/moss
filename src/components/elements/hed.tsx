@@ -26,6 +26,8 @@ interface HedProps {
   size: number
 }
 
+type HProps = Omit<HedProps, 'size'>
+
 export function Hed({ accent, children, size }: HedProps): ReactElement {
   return (
     <StyledHed $accent={ !!accent } $size={ size }>
@@ -33,3 +35,10 @@ export function Hed({ accent, children, size }: HedProps): ReactElement {
     </StyledHed>
   )
 }
+
+export const H1 = (props: HProps): ReactElement => <Hed { ...props } size={ 1 } />
+export const H2 = (props: HProps): ReactElement => <Hed { ...props } size={ 2 } />
+export const H3 = (props: HProps): ReactElement => <Hed { ...props } size={ 3 } />
+export const H4 = (props: HProps): ReactElement => <Hed { ...props } size={ 4 } />
+export const H5 = (props: HProps): ReactElement => <Hed { ...props } size={ 5 } />
+export const H6 = (props: HProps): ReactElement => <Hed { ...props } size={ 6 } />

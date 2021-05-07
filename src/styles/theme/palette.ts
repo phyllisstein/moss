@@ -2,7 +2,7 @@ import { js as dark } from './spectrum-dark'
 import R from 'ramda'
 
 export const js = {
-  text: dark.gray800,
+  text: dark.gray900,
 }
 
 export type JS = typeof js
