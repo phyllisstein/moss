@@ -9,7 +9,7 @@ plugins:
 ignoreFiles:
   - node_modules/**/*
   - dist/**/*
-  - "**/*.d.ts"
+  - '**/*.d.ts'
 rules:
   order/properties-order:
     - []
