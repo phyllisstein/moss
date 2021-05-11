@@ -25,7 +25,7 @@ export function Pin({
     if (!el) return
 
     setPinHeight(el.offsetHeight)
-    setTargetDepth((el.children[3] as HTMLParagraphElement).offsetTop)
+    setTargetDepth((el.children[2] as HTMLParagraphElement).offsetTop)
   }, [])
 
   const style = useSpring({

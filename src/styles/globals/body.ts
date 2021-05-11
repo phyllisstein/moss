@@ -9,7 +9,6 @@ export const Body = createGlobalStyle`
     outline: none;
 
     -webkit-font-smoothing: antialiased;
-
     -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
     -webkit-text-rendering: optimizeLegibility;
     text-rendering: optimizeLegibility;
