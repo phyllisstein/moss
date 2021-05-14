@@ -1,36 +1,53 @@
 import type { ReactElement, ReactNode } from 'react'
-import styled from 'styled-components'
+import styled, { css } from 'styled-components'
+import fp from 'lodash/fp'
 
 interface StyledHedProps {
-  $accent: boolean
+  $primary: boolean
   $size: number
+  children: string
 }
 
 const StyledHed = styled.h1<StyledHedProps>`
-  ${ ({ $accent, $size, theme }) => {
-    const fontSize = 12 - $size
+  ${ ({ $primary, $size, theme }) => {
+    const fontSize = 8 - $size
     const plumberProps = {
       fontSize,
-      lineHeight: fontSize ** 2,
+      leadingBottom: fontSize / 6,
+      leadingTop: fontSize,
+      lineHeight: fontSize,
     }
 
-    return $accent
-      ? theme.typeface.accent(plumberProps)
-      : theme.typeface.primary(plumberProps)
+    return $primary
+      ? theme.typeface.primary(plumberProps)
+      : theme.typeface.accent(plumberProps)
   } }
+
+  color: ${ ({ $size, theme }) => {
+    if ($size > 4) {
+    return theme.palette.css.gray800
+    }
+
+    return theme.palette.css.gray900
+    } };
+  font-weight: ${ ({ $size }) => ($size <= 4 ? '500' : '700') };
 `
 
 interface HedProps {
-  accent?: boolean
   children?: ReactNode
+  primary?: boolean
   size: number
 }
 
 type HProps = Omit<HedProps, 'size'>
 
-export function Hed({ accent, children, size }: HedProps): ReactElement {
+const clampHeader = fp.clamp(1, 6)
+
+export function Hed({ children, primary, size }: HedProps): ReactElement {
+  const clampedSize = clampHeader(size)
+
   return (
-    <StyledHed $accent={ !!accent } $size={ size }>
+    <StyledHed $primary={ !!primary } $size={ size } as={ `h${ clampedSize }` }>
       { children }
     </StyledHed>
   )

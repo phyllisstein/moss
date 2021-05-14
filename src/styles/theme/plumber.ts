@@ -13,7 +13,7 @@ const round = _.partial(_.round, _.partial.placeholder, 0)
 
 const getBaselineCorrection = ({ baseline, fontSize, lineHeight }) => {
   const baselineFromBottom = (lineHeight - fontSize) / 2 + fontSize * baseline
-  const correctedBaseline = _.round(baselineFromBottom)
+  const correctedBaseline = baselineFromBottom
   const baselineDifference = correctedBaseline - baselineFromBottom
 
   return {
@@ -29,7 +29,7 @@ const getPlumber = ({
   leadingBottom: LEADING_BOTTOM = 0,
   leadingTop: LEADING_TOP = 0,
   lineHeight: LINE_HEIGHT,
-  useBaselineOrigin: USE_BASELINE_ORIGIN = true,
+  useBaselineOrigin: USE_BASELINE_ORIGIN = false,
 }) => {
   function plumber({
     baseline = B,
@@ -41,13 +41,14 @@ const getPlumber = ({
     useBaselineOrigin = USE_BASELINE_ORIGIN,
   } = {}) {
     const [gridHeightValue, gridHeightUnit] = getValueAndUnit(gridHeight)
-    fontSize = unitless(fontSize)
+    const scaledFontSize = unitless(fontSize)
+
     lineHeight =
-      lineHeight == null ? fontSize * 1.2 : unitless(lineHeight * 1.2)
+      lineHeight == null ? unitless(1.777 ** fontSize) : unitless(lineHeight)
 
     const { baselineDifference, correctedBaseline } = getBaselineCorrection({
       baseline,
-      fontSize,
+      fontSize: scaledFontSize,
       lineHeight,
     })
 
@@ -58,13 +59,11 @@ const getPlumber = ({
 
     const shift = baselineDifference < 0 ? 0 : 1
 
-    fontSize = round(fontSize * gridHeightValue)
-    const marginTop = round((leadingTop - shift) * gridHeightValue)
-    const paddingTop = round((shift - baselineDifference) * gridHeightValue)
-    const paddingBottom = round(
-      (1 - shift + baselineDifference) * gridHeightValue,
-    )
-    const marginBottom = round((leadingBottom + shift - 1) * gridHeightValue)
+    const gridFontSize = scaledFontSize * gridHeightValue
+    const marginTop = (leadingTop - shift) * gridHeightValue
+    const paddingTop = (shift - baselineDifference) * gridHeightValue
+    const paddingBottom = (1 - shift + baselineDifference) * gridHeightValue
+    const marginBottom = (leadingBottom + shift - 1) * gridHeightValue
 
     return css`
       margin-top: ${ marginTop }${ gridHeightUnit };
@@ -72,7 +71,7 @@ const getPlumber = ({
       padding-top: ${ paddingTop }${ gridHeightUnit };
       padding-bottom: ${ paddingBottom }${ gridHeightUnit };
 
-      font-size: ${ fontSize }${ gridHeightUnit };
+      font-size: ${ gridFontSize }${ gridHeightUnit };
       line-height: ${ lineHeight }${ gridHeightUnit };
     `
   }

@@ -1,3 +1,3 @@
 import { css } from './scale'
 
-export const textIndent = css(1)
+export const textIndent = css(5)
