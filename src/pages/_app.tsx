@@ -1,4 +1,4 @@
-import { AdobeClean, AdobeCleanSerif } from 'styles/fonts'
+import { AdobeClean, AdobeCleanSerif } from 'assets/fonts'
 import { Helmet, HelmetProvider } from 'react-helmet-async'
 import {
   ThemeProvider as StyledThemeProvider,
