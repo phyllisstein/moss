@@ -1,6 +1,6 @@
 import _ from 'lodash'
-import { getValueAndUnit } from 'polished'
 import { css } from 'styled-components'
+import { getValueAndUnit } from 'polished'
 import { unitless } from './scale'
 
 // (UnitsPerEm − hhea.Ascender − hhea.Descender) / (2 × UnitsPerEm)
@@ -44,7 +44,7 @@ const getPlumber = ({
     const scaledFontSize = unitless(fontSize)
 
     lineHeight =
-      lineHeight == null ? unitless(1.777 ** fontSize) : unitless(lineHeight)
+      lineHeight == null ? unitless(1.333 * fontSize) : unitless(lineHeight)
 
     const { baselineDifference, correctedBaseline } = getBaselineCorrection({
       baseline,

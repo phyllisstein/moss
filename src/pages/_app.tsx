@@ -19,11 +19,13 @@ export default function App({ Component, pageProps }: AppProps): ReactElement {
             <AdobeClean />
             <AdobeCleanSerif />
             <Body />
+
             <Helmet defaultTitle='Moss' titleTemplate='%s | Moss'>
               <html
                 className='spectrum spectrum--dark spectrum--medium'
                 lang='en' />
             </Helmet>
+
             <Component { ...pageProps } />
           </RecoilRoot>
         </StyledThemeProvider>
