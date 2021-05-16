@@ -1,4 +1,9 @@
 {
+  "[markdown]": {
+    "editor.wordWrap": "bounded",
+    "editor.quickSuggestions": false,
+    "editor.formatOnSave": false
+  },
   "editor.defaultFormatter": "sebastian-software.effective-prettier-vscode",
   "editor.formatOnSave": true,
   "editor.codeActionsOnSave": {
