@@ -13,11 +13,12 @@ module.exports = api => {
     [
       'styled-components',
       {
-        displayName: !IS_PRODUCTION,
-        minify: IS_PRODUCTION,
-        pure: IS_PRODUCTION,
+        displayName: true,
+        minify: false,
+        process: false,
+        pure: true,
         ssr: true,
-        transpileTemplateLiterals: IS_PRODUCTION,
+        transpileTemplateLiterals: true,
       },
     ],
   ]
