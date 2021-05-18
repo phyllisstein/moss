@@ -5,11 +5,11 @@ export default function TumblerPage(): ReactNode {
   return (
     <Tumbler>
       <Pin>
-        <Lorem ipsum='genesis' />
+        <Lorem grafs={ 4 } ipsum='genesis' />
       </Pin>
 
       <Pin primary>
-        <Lorem ipsum='bluth' />
+        <Lorem grafs={ 5 } ipsum='bluth' />
       </Pin>
 
       <Pin>

@@ -3,6 +3,4 @@ import styled from 'styled-components'
 
 export const Inner = styled(animated.div)``
 
-export const Outer = styled.div`
-  overflow: hidden;
-`
+export const Outer = styled.div``

@@ -18,8 +18,7 @@ export const bluth = [
     piece of ass he wants. I hate the Wetlands. They're stupid and wet, and there
     are bugs everywhere, and I think I maced a crane. Hey, look at that – you're
     mean sober, too. OH MY GOD, WE'RE HAVING A FIRE… sale. Oh, the burning! ♪♪
-    Amaaaaaaziiiing Graaaace ♪♪ Why are you squeezing me with your body? Oh Gob, you
-    could charm the black off a telegram boy.
+    Amaaaaaaziiiing Graaaace ♪♪ Why are you squeezing me with your body?
   `,
   `
     I hate the Wetlands. They're stupid and wet, and there are bugs everywhere, and

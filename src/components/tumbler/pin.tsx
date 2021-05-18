@@ -24,21 +24,24 @@ export function Pin({
   const innerHeightRef = useCallback((el: HTMLDivElement) => {
     if (!el) return
 
-    setPinHeight(el.offsetHeight)
-    setTargetDepth((el.children[2] as HTMLParagraphElement).offsetTop)
+    setPinHeight(el.scrollHeight)
+
+    const target = el.children[2] as HTMLParagraphElement
+    target.style.color = 'hsl(357, 100%, 74%)'
+
+    setTargetDepth(target.offsetTop)
   }, [])
 
   const style = useSpring({
-    y: `${ pinScroll * (targetDepth / pinHeight) * -100 }%`,
+    y: `${ ((pinScroll * targetDepth) / pinHeight) * -100 }%`,
   })
 
   useWheel(
-    ({ xy: [, scrollY] }) => {
+    ({ xy: [_, scrollY] }) => {
       setPinScroll(scrollY / pinHeight)
     },
     {
       domTarget: outerRef,
-      enabled: primary,
     },
   )
 
