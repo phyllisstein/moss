@@ -1,4 +1,5 @@
-import { Lorem, Pin, Tumbler } from 'components'
+import { Pin, Tumbler } from 'components/tumbler'
+import { Lorem } from 'components/lorem'
 import type { ReactNode } from 'react'
 
 export default function TumblerPage(): ReactNode {

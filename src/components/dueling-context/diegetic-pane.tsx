@@ -2,7 +2,7 @@ import { Column } from './text-styles'
 import { P } from '../elements'
 import type { ReactElement } from 'react'
 
-export function Text(): ReactElement {
+export function DiegeticPane(): ReactElement {
   return (
     <Column>
       <P>“Did you get another woman analyst?”</P>

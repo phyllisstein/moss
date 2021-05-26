@@ -2,7 +2,7 @@ import { Column } from './text-styles'
 import { P } from '../elements'
 import type { ReactElement } from 'react'
 
-export function Context(): ReactElement {
+export function EditorialPane(): ReactElement {
   return (
     <Column>
       { /* Text Here! */ }
