@@ -22,5 +22,6 @@
     "tw\\.\\w+`([^`]*)", // tw.xxx`...`
     "tw\\(.*?\\)`([^`]*)" // tw(Component)`...`
   ],
-  "stylelint.enable": true
+  "stylelint.enable": true,
+  "typescript.tsdk": "node_modules/typescript/lib"
 }
