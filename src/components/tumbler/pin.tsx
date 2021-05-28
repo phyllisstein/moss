@@ -26,7 +26,7 @@ export function Pin({
 
     setPinHeight(el.scrollHeight)
 
-    const target = el.children[2] as HTMLParagraphElement
+    const target = el.children[1] as HTMLParagraphElement
     target.style.color = 'hsl(357, 100%, 74%)'
 
     setTargetDepth(target.offsetTop)

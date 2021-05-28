@@ -22,7 +22,7 @@ export default function App({ Component, pageProps }: AppProps): ReactElement {
 
             <Helmet defaultTitle='Moss' titleTemplate='%s | Moss'>
               <html
-                className='spectrum spectrum--dark spectrum--medium'
+                className='spectrum spectrum--light spectrum--medium'
                 lang='en' />
             </Helmet>
 
