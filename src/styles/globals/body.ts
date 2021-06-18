@@ -6,9 +6,8 @@ export const Body = createGlobalStyle`
   *::after {
     box-sizing: inherit;
 
-    outline: none;
-
     -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: always;
     -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
     -webkit-text-rendering: optimizeLegibility;
     text-rendering: optimizeLegibility;
