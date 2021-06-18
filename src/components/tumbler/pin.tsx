@@ -1,6 +1,12 @@
-import type { HTMLAttributes, ReactElement, ReactNode } from 'react'
+import {
+  HTMLAttributes,
+  ReactElement,
+  ReactNode,
+  useCallback,
+  useRef,
+  useState,
+} from 'react'
 import { Inner, Outer } from './pin-styles'
-import { useCallback, useRef, useState } from 'react'
 import { tumbler as tumblerState } from 'state'
 import { useRecoilState } from 'recoil'
 import { useSpring } from 'react-spring'

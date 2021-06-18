@@ -1,4 +1,4 @@
-import type { HTMLAttributes, ReactElement, ReactNode } from 'react'
+import { HTMLAttributes, ReactElement, ReactNode } from 'react'
 import { Inner, Wrapper } from './tumbler-styles'
 
 interface Props extends HTMLAttributes<HTMLElement> {

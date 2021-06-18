@@ -1,6 +1,6 @@
-import type { ReactElement, ReactNode } from 'react'
-import styled, { css } from 'styled-components'
+import { ReactElement, ReactNode } from 'react'
 import fp from 'lodash/fp'
+import styled from 'styled-components'
 
 interface StyledHedProps {
   $primary: boolean

@@ -4,9 +4,9 @@ import {
   ThemeProvider as StyledThemeProvider,
   StyleSheetManager,
 } from 'styled-components'
-import type { AppProps } from 'next/app'
+import { AppProps } from 'next/app'
 import { Body } from 'styles/globals'
-import type { ReactElement } from 'react'
+import { ReactElement } from 'react'
 import { RecoilRoot } from 'recoil'
 import { theme } from 'styles/theme'
 

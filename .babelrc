@@ -1,0 +1,29 @@
+{
+  "presets": [
+    [
+      "@babel/env",
+      {
+        "bugfixes": true,
+        "corejs": {
+          "proposals": true,
+          "version": 3
+        },
+        "targets": "> 5% and not dead and not ie 11",
+        "useBuiltIns": "usage"
+      }
+    ],
+    [
+      "@babel/react",
+      {
+        "runtime": "automatic"
+      }
+    ],
+    [
+      "@babel/typescript",
+      {
+        "allowDeclareFields": true
+      }
+    ]
+  ],
+  "plugins": []
+}

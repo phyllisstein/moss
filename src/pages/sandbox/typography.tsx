@@ -1,5 +1,5 @@
 import { Hed, P } from 'components'
-import type { ReactElement } from 'react'
+import { ReactElement } from 'react'
 
 export default function TypographySandboxPage(): ReactElement {
   return (

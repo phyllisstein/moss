@@ -1,8 +1,5 @@
 module.exports = {
   distDir: 'build',
-  future: {
-    webpack5: true,
-  },
   target: 'serverless',
   typescript: {
     ignoreBuildErrors: true,
@@ -19,4 +16,5 @@ module.exports = {
 
     return config
   },
+  webpack5: true,
 }

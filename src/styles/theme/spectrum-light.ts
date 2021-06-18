@@ -1,7 +1,7 @@
 /* eslint-disable sort-keys */
 
+import * as R from 'ramda'
 import chroma from 'chroma-js'
-import R from 'ramda'
 
 export const js = {
   gray50: chroma('hsl(0, 0%, 100%)'),

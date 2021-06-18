@@ -1,9 +1,8 @@
 import * as ipsa from './ipsa'
-import { forwardRef, useMemo } from 'react'
+import * as R from 'ramda'
+import { forwardRef, ReactElement, useMemo } from 'react'
 import _ from 'lodash'
 import { P } from '../elements'
-import R from 'ramda'
-import type { ReactElement } from 'react'
 
 type Ipsa = keyof typeof ipsa
 
