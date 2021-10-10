@@ -32,7 +32,8 @@
         "./src/*",
         "./vendor/*"
       ]
-    }
+    },
+    "incremental": true
   },
   "exclude": [
     "node_modules"
