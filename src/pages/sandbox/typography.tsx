@@ -1,7 +1,8 @@
-import { Hed, P } from 'components'
 import { ReactElement } from 'react'
 
-export default function TypographySandboxPage(): ReactElement {
+import { Hed, P } from '~/components/elements'
+
+export default function TypographySandboxPage (): ReactElement {
   return (
     <article>
       <section>

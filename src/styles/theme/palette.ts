@@ -1,5 +1,6 @@
 import * as R from 'ramda'
-import { js as spectrum } from './spectrum-dark'
+
+import { js as spectrum } from './palette-spectrum-dark'
 
 export const js = {
   ...spectrum,

@@ -8,13 +8,13 @@ interface GrafProps {
 
 export const P = styled.p<GrafProps>`
   ${ ({ $accent, theme }) =>
-    $accent
+    $accent != null
       ? theme.typeface.accent({ fontSize: 4 })
       : theme.typeface.primary({ fontSize: 4 }) }
 
   text-align: ${ ({ $alignment = 'left' }) => $alignment };
   text-indent: ${ ({ $indent, theme }) =>
-    $indent ? theme.typography.textIndent : 0 };
+    $indent != null ? theme.typography.textIndent : 0 };
 
   & ~ & {
     text-indent: ${ ({ theme }) => theme.typography.textIndent };

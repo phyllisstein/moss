@@ -1,7 +1,7 @@
 /* eslint-disable sort-keys */
 
-import * as R from 'ramda'
 import chroma from 'chroma-js'
+import * as R from 'ramda'
 
 export const js = {
   gray50: chroma('hsl(0, 0%, 100%)'),
@@ -55,10 +55,10 @@ export const js = {
   yellow500: chroma('hsl(51, 100%, 41%)'),
   yellow600: chroma('hsl(51, 100%, 38%)'),
   yellow700: chroma('hsl(50, 100%, 36%)'),
-  chartruse400: chroma('hsl(92, 60%, 54%)'),
-  chartruse500: chroma('hsl(92, 52%, 51%)'),
-  chartruse600: chroma('hsl(92, 51%, 47%)'),
-  chartruse700: chroma('hsl(92, 53%, 43%)'),
+  chartreuse400: chroma('hsl(92, 60%, 54%)'),
+  chartreuse500: chroma('hsl(92, 52%, 51%)'),
+  chartreuse600: chroma('hsl(92, 51%, 47%)'),
+  chartreuse700: chroma('hsl(92, 53%, 43%)'),
   celery400: chroma('hsl(130, 45%, 49%)'),
   celery500: chroma('hsl(130, 46%, 45%)'),
   celery600: chroma('hsl(130, 47%, 41%)'),

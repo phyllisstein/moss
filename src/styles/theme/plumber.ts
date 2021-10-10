@@ -1,6 +1,7 @@
 import _ from 'lodash'
-import { css } from 'styled-components'
 import { getValueAndUnit } from 'polished'
+import { css, SimpleInterpolation } from 'styled-components'
+
 import { unitless } from './scale'
 
 // (UnitsPerEm − hhea.Ascender − hhea.Descender) / (2 × UnitsPerEm)
@@ -11,7 +12,9 @@ const BASELINE = {
 
 const round = _.partial(_.round, _.partial.placeholder, 0)
 
-const getBaselineCorrection = ({ baseline, fontSize, lineHeight }) => {
+type BaselineCorrection = (config: { baseline: number, fontSize: number, lineHeight: number }) => { baselineDifference: number, correctedBaseline: number }
+
+const getBaselineCorrection: BaselineCorrection = ({ baseline, fontSize, lineHeight }) => {
   const baselineFromBottom = (lineHeight - fontSize) / 2 + fontSize * baseline
   const correctedBaseline = baselineFromBottom
   const baselineDifference = correctedBaseline - baselineFromBottom
@@ -22,6 +25,18 @@ const getBaselineCorrection = ({ baseline, fontSize, lineHeight }) => {
   }
 }
 
+export interface PlumberOptions {
+  baseline: number
+  fontSize?: number
+  gridHeight?: string
+  leadingBottom?: number
+  leadingTop?: number
+  lineHeight?: number
+  useBaselineOrigin?: boolean
+}
+
+export type PlumberFunction = (options: Partial<PlumberOptions>) => SimpleInterpolation
+
 const getPlumber = ({
   baseline: B,
   fontSize: FONT_SIZE = 1,
@@ -30,8 +45,8 @@ const getPlumber = ({
   leadingTop: LEADING_TOP = 0,
   lineHeight: LINE_HEIGHT,
   useBaselineOrigin: USE_BASELINE_ORIGIN = false,
-}) => {
-  function plumber({
+}: PlumberOptions): PlumberFunction => {
+  const plumber = ({
     baseline = B,
     fontSize = FONT_SIZE,
     gridHeight = GRID_HEIGHT,
@@ -39,7 +54,7 @@ const getPlumber = ({
     leadingTop = LEADING_TOP,
     lineHeight = LINE_HEIGHT,
     useBaselineOrigin = USE_BASELINE_ORIGIN,
-  } = {}) {
+  }: Partial<PlumberOptions> = {}): SimpleInterpolation => {
     const [gridHeightValue, gridHeightUnit] = getValueAndUnit(gridHeight)
     const scaledFontSize = unitless(fontSize)
 

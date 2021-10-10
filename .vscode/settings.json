@@ -10,6 +10,10 @@
     "source.fixAll": true,
     "source.organizeImports": false
   },
+  "eslint.codeAction.disableRuleComment": {
+    "enable": true,
+    "location": "separateLine"
+  },
   "tailwindCSS.emmetCompletions": true,
   "tailwindCSS.includeLanguages": {
     "typescript": "javascript",
@@ -22,5 +26,6 @@
     "tw\\.\\w+`([^`]*)", // tw.xxx`...`
     "tw\\(.*?\\)`([^`]*)" // tw(Component)`...`
   ],
-  "stylelint.enable": true
+  "stylelint.enable": true,
+  "typescript.tsdk": "node_modules/typescript/lib"
 }

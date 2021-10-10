@@ -3,25 +3,48 @@
     "allowJs": true,
     "allowSyntheticDefaultImports": true,
     "alwaysStrict": true,
-    "baseUrl": "./src",
+    "baseUrl": "./",
     "checkJs": true,
     "esModuleInterop": true,
     "experimentalDecorators": true,
     "forceConsistentCasingInFileNames": true,
     "isolatedModules": true,
     "jsx": "preserve",
-    "lib": ["dom", "dom.iterable", "esnext"],
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
     "module": "esnext",
     "moduleResolution": "node",
     "noEmit": true,
     "resolveJsonModule": true,
     "skipLibCheck": true,
     "strict": true,
-    "target": "esnext"
+    "target": "esnext",
+    "typeRoots": [
+      "./node_modules/@types",
+      "./src/types"
+    ],
+    "paths": {
+      "~/*": [
+        "*",
+        "./src/*",
+        "./vendor/*"
+      ]
+    }
   },
-  "exclude": ["node_modules"],
+  "exclude": [
+    "node_modules"
+  ],
+  "include": [
+    "**/*.ts",
+    "**/*.tsx",
+    "**/*.d.ts",
+    "global.d.ts",
+    "next-env.d.ts"
+  ],
   "typeAcquisition": {
     "enable": true
-  },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"]
+  }
 }

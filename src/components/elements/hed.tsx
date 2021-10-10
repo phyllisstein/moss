@@ -1,11 +1,10 @@
-import { ReactElement, ReactNode } from 'react'
-import fp from 'lodash/fp'
+import * as R from 'ramda'
+import { FunctionComponent, ReactElement } from 'react'
 import styled from 'styled-components'
 
 interface StyledHedProps {
   $primary: boolean
   $size: number
-  children: string
 }
 
 const StyledHed = styled.h1<StyledHedProps>`
@@ -25,29 +24,27 @@ const StyledHed = styled.h1<StyledHedProps>`
 
   color: ${ ({ $size, theme }) => {
     if ($size > 4) {
-    return theme.palette.css.gray800
+      return theme.palette.css.gray800
     }
-
     return theme.palette.css.gray900
-    } };
+  } };
   font-weight: ${ ({ $size }) => ($size <= 4 ? '500' : '700') };
 `
 
 interface HedProps {
-  children?: ReactNode
   primary?: boolean
   size: number
 }
 
 type HProps = Omit<HedProps, 'size'>
 
-const clampHeader = fp.clamp(1, 6)
+const clampHeader = R.clamp(1, 6)
 
-export function Hed({ children, primary, size }: HedProps): ReactElement {
+export const Hed: FunctionComponent<HedProps> = ({ children, primary, size }) => {
   const clampedSize = clampHeader(size)
 
   return (
-    <StyledHed $primary={ !!primary } $size={ size } as={ `h${ clampedSize }` }>
+    <StyledHed $primary={ primary != null } $size={ size } as={ `h${ clampedSize }` }>
       { children }
     </StyledHed>
   )

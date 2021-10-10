@@ -1,6 +1,7 @@
 import * as R from 'ramda'
+import { css, SimpleInterpolation } from 'styled-components'
+
 import { css as animationCSS, AnimationDuration } from './animation'
-import { css } from 'styled-components'
 
 const SHADOWS = {
   AMBIENT: [
@@ -94,9 +95,13 @@ const BLACK = {
 
 const clampLevel = R.clamp(1, 25)
 
-const dropSpread = R.pipe(R.split(' '), R.dropLast(1), R.join(' '))
+const dropSpread = R.pipe<string, string[], string[], string>(R.split(' '), R.dropLast<string>(1), R.join(' '))
+interface ElevationFunction {
+  (level: number): SimpleInterpolation
+  animation: SimpleInterpolation
+}
 
-export function box(level = 1) {
+export const box: ElevationFunction = (level = 1) => {
   level = clampLevel(level)
 
   const umbra = SHADOWS.UMBRA[level]
@@ -114,7 +119,8 @@ box.animation = animationCSS({
   properties: 'box-shadow',
 })
 
-export function text(level = 1) {
+
+export const text: ElevationFunction = (level = 1) => {
   level = clampLevel(level)
 
   const umbra = dropSpread(SHADOWS.UMBRA[level])

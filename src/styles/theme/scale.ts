@@ -7,7 +7,7 @@ export const css = (step = 0): string =>
 
 export const unitless = (step = 0): number => {
   const vu = getValueAndUnit(css(step)) as ValueAndUnit
-  if (!vu.length) {
+  if (vu.length == null) {
     return 0
   }
 

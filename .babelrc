@@ -8,14 +8,17 @@
           "proposals": true,
           "version": 3
         },
-        "targets": "> 5% and not dead and not ie 11",
+        "targets": {
+          "browsers": "last 2 versions and >= 5% and not IE >= 0"
+        },
         "useBuiltIns": "usage"
       }
     ],
     [
       "@babel/react",
       {
-        "runtime": "automatic"
+        "runtime": "automatic",
+        "useBuiltIns": true
       }
     ],
     [
@@ -25,5 +28,7 @@
       }
     ]
   ],
-  "plugins": []
+  "plugins": [
+    "macros"
+  ]
 }

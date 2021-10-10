@@ -1,7 +1,8 @@
-import { accent as plumberAccent, primary as plumberPrimary } from './plumber'
-import { css } from 'styled-components'
+import { css, SimpleInterpolation } from 'styled-components'
 
-export const accent = (plumberOpts = {}) => css`
+import { accent as plumberAccent, primary as plumberPrimary, PlumberOptions } from './plumber'
+
+export const accent = (plumberOpts: Partial<PlumberOptions> = {}): SimpleInterpolation => css`
   ${ accentFamily }
   ${ plumberAccent(plumberOpts) }
 `
@@ -11,7 +12,7 @@ export const accentFamily = css`
     'Times', serif;
 `
 
-export const primary = (plumberOpts = {}) => css`
+export const primary = (plumberOpts: Partial<PlumberOptions> = {}): SimpleInterpolation => css`
   ${ primaryFamily }
   ${ plumberPrimary(plumberOpts) }
 `

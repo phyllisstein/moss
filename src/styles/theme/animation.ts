@@ -1,17 +1,17 @@
-import { css as styledCSS } from 'styled-components'
+import { css as styledCSS, SimpleInterpolation } from 'styled-components'
 // import { PropertiesHyphen } from 'csstype' // FIXME: Not sure why this is breaking.
 
 export interface CSSParams {
   curve?: AnimationCurve
   duration?: AnimationDuration
-  properties?: string | string[]
+  properties?: string[] | string
 }
 
-export function css({
+export function css ({
   curve = AnimationCurve.MaterialStandard,
   duration = AnimationDuration.Entering,
   properties = ['all'],
-}: CSSParams = {}) {
+}: CSSParams = {}): SimpleInterpolation {
   const property = Array.from(properties).join(',')
 
   return styledCSS`

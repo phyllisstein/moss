@@ -1,23 +1,20 @@
----
 extends:
   - stylelint-config-recommended
+  - stylelint-config-standard
   - stylelint-config-styled-components
 plugins:
   - stylelint-config-rational-order/plugin
-  - stylelint-no-unsupported-browser-features
   - stylelint-order
 ignoreFiles:
-  - node_modules/**/*
-  - dist/**/*
-  - public/**/*
-  - build/**/*
+  - 'node_modules/**/*'
+  - 'dist/**/*'
   - '**/*.d.ts'
 rules:
   order/properties-order:
     - []
     - unspecified: bottom
       emptyLineMinimumPropertyThreshold: 4
-  plugin/no-unsupported-browser-features: null
+
   plugin/rational-order:
     - true
     - empty-line-between-groups: threshold
@@ -25,12 +22,15 @@ rules:
       empty-lines-within-groups: false
       empty-line-before-unspecified: always
       unspecified: bottomAlphabetical
+
   block-no-empty: null
   color-hex-case: upper
   declaration-colon-newline-after: null
   declaration-empty-line-before: null
   font-family-no-missing-generic-family-keyword: null
+  function-comma-newline-after: null
   function-name-case: null
+  function-whitespace-after: null
   indentation: 2
   no-eol-whitespace: null
   no-extra-semicolons: null
